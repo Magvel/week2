@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+     "box1 box2 box3"
+     "box1 box2 box3"
+     "box1 box2 box3";
+     grid-gap: 20px;
+     position: relative;
+}
+
+.box1{
+    background-color: grey;
+    border: 1px solid black;
+    grid-area: card1;
+}
+
+.box2{
+    background-color: grey;
+    border: 1px solid black;
+    grid-area: card2;
+}
+
+.box3{
+    background-color: grey;
+    border: 1px solid black;
+    grid-area: card3;
+}
+
+h2{
+    text-align: center;
+    border: 1px solid black;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+
+.title{
+    position: relative;
+}
+
+.BOX1{
+    background-color: pink;
+}
+
+.BOX2{
+    background-color: red;
+    color: white;
+}
+
+.BOX3{
+    background-color: yellow;
+}
+
+p{
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.container{
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box3"
+    ;
+}
+}
+
+@media screen and (max-width: 767px){
+.container{
+    grid-template-areas: 
+    "box1"
+    "box2"
+    "box3";
+}
+}
